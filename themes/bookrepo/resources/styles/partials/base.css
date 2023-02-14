@@ -1,0 +1,86 @@
+body {
+  @apply font-roboto text-text;
+}
+.header__home {
+  @apply h-[50px] flex items-center;
+
+  .brand {
+    img {
+      @apply w-[200px] h-auto;
+    }
+  }
+
+  .nav-primary {
+    ul {
+      @apply flex gap-8;
+      li {
+        list-style: none;
+      }
+    }
+  }
+}
+
+.home__hero {
+  @apply flex items-center pb-8 bg-primary-lighter;
+
+  &--left,
+  &--right {
+    @apply w-full lg:w-1/2;
+  }
+
+  &--left {
+    @apply order-2 text-center lg:order-1 lg:text-left;
+    .title {
+      @apply font-bold font-roboto title--3 lg:title--1;
+      line-height: 3rem;
+
+      @screen lg {
+        line-height: 4.5rem;
+        max-width: 550px;
+      }
+    }
+    p {
+      @apply py-4 lg:max-w-[550px];
+    }
+
+    a {
+      @apply bg-primary hover:bg-primary-darkness hover:text-primary text-primary-darkness font-bold py-2 px-8 transition-all duration-700 ease-in-out;
+    }
+  }
+
+  &--right {
+    @apply order-1 lg:order-2;
+
+    img {
+      @apply w-[80%] mx-auto lg:mr-0;
+    }
+  }
+}
+
+.customBlock {
+  @apply bg-slate-100 py-8 lg:py-14;
+
+  .titleCustomBlock {
+    .title {
+      @apply title--3 lg:title--2 text-center lg:text-left;
+    }
+  }
+}
+.grid__books {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:mt-4;
+
+  .item__book {
+    @apply my-4;
+    .title {
+      @apply text-text mt-4;
+    }
+
+    img {
+      @apply h-[244px] md:h-[350px] lg:h-[350px] object-cover;
+    }
+  }
+}
+
+footer {
+  @apply bg-primary-darkness mx-auto text-primary text-center py-2 flex items-center justify-center;
+}
